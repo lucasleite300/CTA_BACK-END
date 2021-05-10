@@ -1,0 +1,24 @@
+spring:
+  profiles:
+    active: dev
+
+---
+spring:
+  profiles: dev
+  app:
+    datasource:
+      driverClassName: com.mysql.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/db_manager_cta?useTimezone=true&serverTimezone=UTC
+      username: root
+      password: 371205XYz
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+---
+jwt:
+  secret: acesso
